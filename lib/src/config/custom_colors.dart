@@ -14,7 +14,7 @@ import 'package:flutter/material.dart';
 };
 
 abstract class CustomColors {
-  static Color customContrastColor = Colors.deepOrange;
+  static Color customContrastColor = Colors.orange;
       
   static MaterialColor customSwatchColor = MaterialColor(0xff008000, _swatchOpacity);
 }
