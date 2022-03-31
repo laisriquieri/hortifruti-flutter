@@ -1,4 +1,5 @@
 
+import 'package:app_comerce/src/config/custom_colors.dart';
 import 'package:flutter/material.dart';
 
 import '../home/home_tab.dart';
@@ -39,7 +40,7 @@ class _BaseScreenState extends State<BaseScreen> {
           });
         },
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.black,
+        backgroundColor: CustomColors.customSwatchColor,
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.white.withAlpha(100),
         items: const [
