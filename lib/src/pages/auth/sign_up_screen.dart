@@ -3,7 +3,7 @@ import 'package:app_comerce/src/config/custom_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
-import 'components/custom_text_field.dart';
+import '../cummon_widgets/custom_text_field.dart';
 
 class SignUpScreen extends StatelessWidget {
   SignUpScreen({Key? key}) : super(key: key);

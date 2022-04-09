@@ -5,7 +5,7 @@ import 'package:app_comerce/src/config/custom_colors.dart';
 import 'package:app_comerce/src/pages/auth/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 import '../base/base_screen.dart';
-import 'components/custom_text_field.dart';
+import '../cummon_widgets/custom_text_field.dart';
 
 
 

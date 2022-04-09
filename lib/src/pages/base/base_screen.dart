@@ -1,6 +1,7 @@
 
 import 'package:app_comerce/src/config/custom_colors.dart';
 import 'package:app_comerce/src/pages/cart/cart_tab.dart';
+import 'package:app_comerce/src/pages/profile/profile_tab.dart';
 import 'package:flutter/material.dart';
 
 import '../home/home_tab.dart';
@@ -27,9 +28,9 @@ class _BaseScreenState extends State<BaseScreen> {
         controller: pageController,
         children: [
           const HomeTab(),
-          CartTab(),
+          const CartTab(),
           Container(color: Colors.greenAccent, ),
-          Container(color: Colors.pinkAccent, ),
+          const ProfileTab(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
