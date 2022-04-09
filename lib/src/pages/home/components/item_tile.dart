@@ -6,7 +6,10 @@ import 'package:flutter/material.dart';
 import '../../../models/item_model.dart';
 
 class ItemTile extends StatelessWidget {
-  ItemTile({Key? key, required this.item,}) : super(key: key);
+  ItemTile({
+    Key? key,
+    required this.item,
+  }) : super(key: key);
 
   final ItemModel item;
 
@@ -17,62 +20,72 @@ class ItemTile extends StatelessWidget {
     return Stack(
       children: [
         //Conteudo
-      GestureDetector(
-        onTap: () {
-          Navigator.of(context).push(MaterialPageRoute(builder: (c) {
-            return ProductScreen( item: item);
+        GestureDetector(
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (c) {
+                  return ProductScreen(item: item);
+                },
+              ),
+            );
           },
-          ),
-          );
-        },
-        child: Card(
-        elevation: 3,
-        shadowColor: Colors.grey.shade500,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(12),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              //Imagem
-              Expanded(child: Image.asset(item.imgUrl)),
-
-
-              //Nome
-              Text(item.itemName,
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                ),),
-
-
-              //Preço - Unidade
-              Row(
+          child: Card(
+            elevation: 3,
+            shadowColor: Colors.grey.shade500,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(12),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Text(
-                    utilsServices.priceToCurrency(item.price),
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                      color: CustomColors.customSwatchColor,
+                  //Imagem
+                  Expanded(
+                    child: Hero(
+                      tag: item.imgUrl,
+                      child: Image.asset(
+                        item.imgUrl,
+                      ),
                     ),
                   ),
-                  Text('/${item.unit}',
-                    style: TextStyle(
-                      color: Colors.grey.shade500,
+
+                  //Nome
+                  Text(
+                    item.itemName,
+                    style: const TextStyle(
+                      fontSize: 16,
                       fontWeight: FontWeight.bold,
-                      fontSize: 12,
                     ),
+                  ),
+
+                  //Preço - Unidade
+                  Row(
+                    children: [
+                      Text(
+                        utilsServices.priceToCurrency(item.price),
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          color: CustomColors.customSwatchColor,
+                        ),
+                      ),
+                      Text(
+                        '/${item.unit}',
+                        style: TextStyle(
+                          color: Colors.grey.shade500,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 12,
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
-            ],
+            ),
           ),
         ),
-    ),
-      ),
 
         Positioned(
           top: 4,
@@ -83,21 +96,19 @@ class ItemTile extends StatelessWidget {
               height: 40,
               width: 35,
               decoration: BoxDecoration(
-                color: CustomColors.customSwatchColor,
-                borderRadius: const BorderRadius.only(
-                  bottomLeft: Radius.circular(15),
-                  topRight: Radius.circular(20),
-                )
-              ),
-              child: const Icon(Icons.add_shopping_cart_outlined,
+                  color: CustomColors.customSwatchColor,
+                  borderRadius: const BorderRadius.only(
+                    bottomLeft: Radius.circular(15),
+                    topRight: Radius.circular(20),
+                  )),
+              child: const Icon(
+                Icons.add_shopping_cart_outlined,
                 color: Colors.white,
                 size: 20,
               ),
-
             ),
           ),
         ),
-
       ],
     );
   }

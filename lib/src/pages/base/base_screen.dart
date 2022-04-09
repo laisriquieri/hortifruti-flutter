@@ -1,11 +1,12 @@
 
 import 'package:app_comerce/src/config/custom_colors.dart';
+import 'package:app_comerce/src/pages/cart/cart_tab.dart';
 import 'package:flutter/material.dart';
 
 import '../home/home_tab.dart';
 
 class BaseScreen extends StatefulWidget {
-  const BaseScreen({Key? key}) : super(key: key);
+  BaseScreen({Key? key}) : super(key: key);
 
   @override
   State<BaseScreen> createState() => _BaseScreenState();
@@ -26,7 +27,7 @@ class _BaseScreenState extends State<BaseScreen> {
         controller: pageController,
         children: [
           const HomeTab(),
-          Container(color: Colors.lightBlue, ),
+          CartTab(),
           Container(color: Colors.greenAccent, ),
           Container(color: Colors.pinkAccent, ),
         ],

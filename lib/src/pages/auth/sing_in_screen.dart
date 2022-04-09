@@ -85,7 +85,7 @@ class SignInScreen extends StatelessWidget {
                   horizontal: 32,
                   vertical: 40,
                 ),
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.vertical(
                     top: Radius.circular(45)
@@ -120,7 +120,7 @@ class SignInScreen extends StatelessWidget {
                         ),
                         onPressed: () {
                           Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (c) {
-                            return const BaseScreen();
+                            return BaseScreen();
                           },),);
                         },
                         child: const Text("Entrar", style: TextStyle( fontSize: 18,),
