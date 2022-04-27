@@ -1,4 +1,3 @@
-
 import 'package:app_comerce/src/config/custom_colors.dart';
 import 'package:app_comerce/src/pages/cart/cart_tab.dart';
 import 'package:app_comerce/src/pages/orders/orders_tab.dart';
@@ -39,7 +38,11 @@ class _BaseScreenState extends State<BaseScreen> {
         onTap: (index) {
           setState(() {
             currentIndex = index;
-            pageController.jumpToPage(index);
+            //pageController.jumpToPage(index);
+            pageController.animateToPage(
+                index,
+              duration: const Duration(milliseconds: 500),
+                curve: Curves.ease,);
           });
         },
         type: BottomNavigationBarType.fixed,
