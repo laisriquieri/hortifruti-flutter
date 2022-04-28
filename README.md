@@ -8,4 +8,4 @@ Alguma dúvida sobre o projeto? Pode me chamar no LinkedIn:
 
 - [LinkedIn](https://www.linkedin.com/in/lais-riquieri/)
 
-![GIF do App(]https://github.com/laisriquieri/hortifruti-flutter/blob/main/GifReadmeVarejao.gif)
+![GIF do App](https://github.com/laisriquieri/hortifruti-flutter/blob/main/GifReadmeVarejao.gif)
