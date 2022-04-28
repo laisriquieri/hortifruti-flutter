@@ -6,6 +6,7 @@ import 'package:app_comerce/src/services/utils_services.dart';
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:app_comerce/src/config/app_data.dart' as app_data;
+import '../cummon_widgets/app_name_widget.dart';
 import 'components/category_tile.dart';
 
 class HomeTab extends StatefulWidget {
@@ -43,22 +44,7 @@ class _HomeTabState extends State<HomeTab> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,
-        title: Text.rich(TextSpan(
-            style: const TextStyle(
-              fontSize: 30,
-            ),
-            children: [
-              TextSpan(
-                  text: 'Vare',
-                  style: TextStyle(
-                    color: CustomColors.customSwatchColor,
-                  )),
-              const TextSpan(
-                  text: 'jão',
-                  style: TextStyle(
-                    color: Colors.orange,
-                  )),
-            ])),
+        title: const AppNameWidget(),
         actions: [
           Padding(
             padding: const EdgeInsets.only(

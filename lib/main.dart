@@ -1,5 +1,6 @@
 
 import 'package:app_comerce/src/pages/auth/sing_in_screen.dart';
+import 'package:app_comerce/src/pages/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:app_comerce/src/config/custom_colors.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white.withAlpha(190),
       ),
       debugShowCheckedModeBanner: false,
-      home:  const SignInScreen(),
+      home:  const SplashScreen(),
     );
   }
 }
